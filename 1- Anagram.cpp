@@ -1,7 +1,8 @@
-#include<iostream>
-using namespace std;
-
-//CONSTRAINT
+// #18/01/2023
+// #242. Valid Anagram
+class Solution {
+public:
+    //CONSTRAINT
 //the constraint is that there will be lowercase 
 //characters only in the input strings, so we are 
 //going to deal with (97-122) ASCII chars only
@@ -52,8 +53,9 @@ bool isAnagram(string S, string T)
     //iterating T, decrementing the frequencies 
     //and checking if anyone goes below 0 or not
     for (int i = 0; i < len; i++)
-        if (fMap[int(T[i])]-- == 0)
+        if (fMap[int(T[i])]-- == 0) 
             return false;
 
     return true;
 }
+};
